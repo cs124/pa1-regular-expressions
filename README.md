@@ -101,7 +101,7 @@ to install Ubuntu for Windows.
 SpamLord.ipynb file to open it.
 
 
-## [ALTERNATIVE] - Google Colaboratory
+## [NOT RECOMMENDED] - Google Colaboratory
 
 1. Go to [colab.research.google.com](http://colab.research.google.com). 
    If prompted to open a notebook, hit cancel for now. You should double-check 
@@ -222,10 +222,6 @@ to use as an SSH client. Install and run it.
     browser where requested.
 
 
-
-
-
-
 # Submitting your Solution
 
 ## Running Locally (macOS/Linux)
@@ -241,7 +237,18 @@ solution for you. It should generate a zip file `submission.zip`.
 1. You can run the cell at the bottom of the Jupyter notebook to zip up your
 solution for you. It should generate a zip file `submission.zip`.
    
-2. The 
+2. To access the file easily from Windows (which you'll need to do if you
+   want to upload it to Gradescope), you'll probably want to move or copy
+   it to an easily accessible location in your Windows filesystem. The C
+   drive in Windows is accessible in Ubuntu at `/mnt/c`, so you should copy
+   it to some path there, like `/mnt/c/Users/[your Windows username]/Desktop`,
+   which is the path to your Windows desktop directory.
+   You can do this from your Ubuntu terminal by doing:
+   
+        cp /path/to/submission.zip /mnt/c/Users/[your Windows username]/Desktop
+
+3. Upload the zip file as your solution to the PA1 SpamLord assignment in 
+   Gradescope (http://www.gradescope.com).
 
 ## Google Colaboratory
 
@@ -269,12 +276,18 @@ solution for you. It should generate a zip file `submission.zip`.
 local machine.
    
    - __[macOS/Linux/Ubuntu for Windows]__
-
-            scp 
     
-        If you're using Ubuntu for Windows, see the section above on
-        "Running Locally (Ubuntu for Windows)" for how to access files on your
-        Ubuntu filesystem from Windows.
+        Open a terminal on your local machine and run the following command to
+        copy the submission zip file from Rice/Myth to your local machine.
+
+            scp [SUNet ID]@[myth/rice].stanford.edu:/path/to/submission.zip /local/path/to/copy/to
+    
+        If you're using Ubuntu for Windows, we recommend choosing as your local
+        path something starting with `/mnt/c`, as this is the UNIX path
+        that corresponds to your Windows filesystem. This allows you to download
+        the zip file to a location where it can be easily accessed directly
+        from windows. For example, if you chose `/mnt/c/Users/[your Windows username]/Desktop`
+        as your destination, the file will be saved to your Windows Desktop folder.
 
    - __[Windows]__ PSCP is another utility that should have been installed
     automatically when you installed PuTTY earlier. Find and run it. In the
