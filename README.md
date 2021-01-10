@@ -128,7 +128,7 @@ SpamLord.ipynb file to open it.
 Rice is the name of a group of machines made available for student use
 by Stanford. Myth machines are similar, but specifically maintained by and
 for the computer science department. For our purposes, they are interchangeable
-and you should feel free to use whichever one you prefer.
+so you should feel free to use whichever one you prefer.
 
 0. __[WINDOWS ONLY]__ If you are using Windows, you have two options. If you
 were able to install Ubuntu for Windows according to the instructions above,
@@ -144,7 +144,7 @@ to use as an SSH client. Install and run it.
 
             ssh [Your SUNet]@rice.stanford.edu
             # OR
-            [Your SUNet]@myth.stanford.edu
+            ssh [Your SUNet]@myth.stanford.edu
 
    - __[Windows]__ Run PuTTY and when prompted, enter `rice.stanford.edu` or
     `myth.stanford.edu` in the box labeled Host Name. Do not change any of the
@@ -168,25 +168,62 @@ to use as an SSH client. Install and run it.
 
 4. Clone the git repository for PA1 in a location of your choice:
       
-            git clone https://github.com/cs124/pa1-spamlord.git
+        git clone https://github.com/cs124/pa1-spamlord.git
    
 5. Enter the project root directory and create a Python virtual environment 
    with all dependencies: 
    
         cd pa1-spamlord
-        pipenv install
+        pipenv install --python 3
    
 8. Activate the newly created environment:
         
         pipenv shell
    
-    You should now see () in front of your shell prompt. You'll need to do this
-   every time you open a new terminal and re-start your notebook server.
-9. Start up your jupyter notebook server
+    You should now see (pa1-spamlord) in front of your shell prompt. You'll need
+   to do this every time you open a new terminal and re-start your notebook 
+   server.
+9. Start up your jupyter notebook server without a browser.
 
-        jupyter notebook --no-browser --port=8887
+        jupyter notebook --no-browser --port=[pick a number from 1025 to 65535]
 
-10. You should now see 
+10. You now need to set up port forwarding from Rice/Myth to your local machine:
+
+   - __[macOS/Linux/Ubuntu for Windows]__ Open a new terminal window on your
+    local machine (NOTE: don't close the one on Rice/Myth, that one needs to
+     stay open) and enter the following command:
+
+            ssh -NL [local port you'd like to use]:localhost:[port number you picked on rice/myth] [SUNet]@[rice/myth].stanford.edu
+
+    If it worked correctly, nothing should happen and your terminal will appear 
+    to hang. This is fine, you should keep it open to maintain the tunnel.
+
+   - __[Windows]__ Go back to your PuTTY window. In the left-side navigation
+    window and select Connection->SSH->Tunnels. In the right-hand side window,
+     there will be a section labeled "Add new forwarded port". 
+     
+    Under Source port, type the local port you'd like to forward to. 
+    Destination, type:
+
+        [rice/myth].stanford.edu:[port your Jupyter notebook server is running on]
+     
+    Then, click "Add".
+
+11. Finally, try opening a browser of your choice (i.e. Chrome, Firefox, Safari)
+    and opening the URL:
+    
+        localhost:[local port number you chose]
+
+    If everything worked correctly, you'll see the Jupyter file
+    explorer. It may prompt you for an authentication token. If it does,
+    go back to the terminal window that is running the Jupyter notebook server
+    (on Rice/Myth). In the output, you should see some URLs with a portion that
+    looks like "token=...". Copy the token from there and paste it into your
+    browser where requested.
+
+
+
+
 
 
 # Submitting your Solution
@@ -199,7 +236,7 @@ solution for you. It should generate a zip file `submission.zip`.
 2. Upload the zip file as your solution to the PA1 SpamLord assignment in 
    Gradescope (http://www.gradescope.com).
 
-## Running Locally (Windows)
+## Running Locally (Ubuntu for Windows)
 
 1. You can run the cell at the bottom of the Jupyter notebook to zip up your
 solution for you. It should generate a zip file `submission.zip`.
@@ -233,9 +270,11 @@ local machine.
    
    - __[macOS/Linux/Ubuntu for Windows]__
 
-            ssh [Your SUNet]@rice.stanford.edu
-            # OR
-            ssh [Your SUNet]@myth.stanford.edu
+            scp 
+    
+        If you're using Ubuntu for Windows, see the section above on
+        "Running Locally (Ubuntu for Windows)" for how to access files on your
+        Ubuntu filesystem from Windows.
 
    - __[Windows]__ PSCP is another utility that should have been installed
     automatically when you installed PuTTY earlier. Find and run it. In the
