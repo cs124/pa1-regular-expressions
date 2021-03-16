@@ -2,133 +2,35 @@
 
 ## Getting the Assignment
 
-### macOS/Ubuntu for Windows/Linux
+You can get started using the same steps you followed for PA0. To recap,
+you'll want to:
 
-0. Open a terminal (terminal for macOS and Linux, 
-   Ubuntu for Windows for Windows).
+1. Open a terminal (terminal for macOS and Linux, 
+   Ubuntu for Windows for Windows, or SSH into Rice/Myth) the same way you did for PA0. 
 
 1. Clone the git repository for PA1 in a location of your choice:
       
         git clone https://github.com/cs124/pa1-spamlord.git
    
 2. Enter the project root directory and activate your cs124 conda environment 
-   (you should have  already created this as part of pa0. If not, please go 
+   (you should have already created this as part of PA0. If not, please go 
    back and follow the instructions there): 
    
         cd pa1-spamlord
         conda activate cs124
    
     You should now see `(cs124)` in front of your shell prompt. 
-   You'll need to do this every time you open a new terminal and re-start your
+   You'll need to do this every time you open a new terminal or re-start your
    notebook server.
 3. Start up your jupyter notebook server
 
         jupyter notebook
 
-10. A window should open automatically in your default browser. If it didn't,
+4. A window should open automatically in your default browser. If it didn't,
     the terminal output should contain a URL you can use to open the
     notebook in a browser of your choice.
-11. From the Jupyter notebook file explorer window that opens, click on the
-pa1.ipynb file to open it.
-
-### Google Colaboratory
-
-1. Go to [colab.research.google.com](http://colab.research.google.com). 
-   If prompted to open a notebook, hit cancel for now. You should double-check 
-   that you are logged in to your Stanford Google account. If not, you can 
-   switch accounts in the top right.
-2. Now go to File->Open Notebook. Go to the GitHub tab. It will ask you to log 
-   in to your GitHub account. Once you've done that, copy and paste 
-   the URL: 
-   https://github.com/cs124/pa1-spamlord into the search box and hit enter. It should show:
-   
-            Repository: cs124/pa1-spamlord
-            Branch:  Master
-
-   Click on pa1.ipynb below to load the notebook.
-      
-
-## [NOT RECOMMENDED] - Rice/Myth
-
-Rice is the name of a group of machines made available for student use
-by Stanford. Myth machines are similar, but specifically maintained by and
-for the computer science department. For our purposes, they are interchangeable
-so you should feel free to use whichever one you prefer.
-
-0. __[WINDOWS ONLY]__ If you are using Windows, you have two options. If you
-were able to install Ubuntu for Windows according to the instructions above,
-you can use that for your terminal/shell to SSH into Rice/Myth (although, if 
-you were able to get Ubuntu for Windows set up we would strongly recommend that
-you try to get things working locally instead of using Rice/Myth). If you
-weren't able to install Ubuntu for Windows, you can instead download and install
-PuTTY [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-to use as an SSH client. Install and run it. 
-
-1. SSH into Rice/Myth.
-   - __[macOS/Linux/Ubuntu for Windows]__
-
-            ssh [Your SUNet]@rice.stanford.edu
-            # OR
-            ssh [Your SUNet]@myth.stanford.edu
-
-   - __[Windows]__ Run PuTTY and when prompted, enter `rice.stanford.edu` or
-    `myth.stanford.edu` in the box labeled Host Name. Do not change any of the
-     other settings. Click open to open a connection, which will cause a 
-     terminal window to pop up. You will then be prompted to log in.
-
-    You'll be prompted for your Stanford SUNet account password. 
-   You will also likely be asked to authenticate using 
-   2-factor authentication.
-
-2. Clone the git repository for PA1 in a location of your choice:
-      
-        git clone https://github.com/cs124/pa1-spamlord.git
-   
-3. Enter the project root directory and activate your cs124 conda environment 
-   (you should have already created this as part of pa0. 
-   If not, please go back and follow the instructions there): 
-   
-        cd pa1-spamlord
-        conda activate cs124
-
-4. Start up your jupyter notebook server without a browser.
-
-        jupyter notebook --no-browser --port=[pick a number from 1025 to 65535]
-
-5. You now need to set up port forwarding from Rice/Myth to your local machine:
-
-   - __[macOS/Linux/Ubuntu for Windows]__ Open a new terminal window on your
-    local machine (NOTE: don't close the one on Rice/Myth, that one needs to
-     stay open) and enter the following command:
-
-            ssh -NL [local port you'd like to use]:localhost:[port number you picked on rice/myth] [SUNet]@[rice/myth].stanford.edu
-
-    If it worked correctly, nothing should happen and your terminal will appear 
-    to hang. This is fine, you should keep it open to maintain the tunnel.
-
-   - __[Windows]__ Go back to your PuTTY window. In the left-side navigation
-    window and select Connection->SSH->Tunnels. In the right-hand side window,
-     there will be a section labeled "Add new forwarded port". 
-     
-    Under Source port, type the local port you'd like to forward to. 
-    Destination, type:
-
-        [rice/myth].stanford.edu:[port your Jupyter notebook server is running on]
-     
-    Then, click "Add".
-
-11. Finally, try opening a browser of your choice (i.e. Chrome, Firefox, Safari)
-    and opening the URL:
-    
-        localhost:[local port number you chose]
-
-    If everything worked correctly, you'll see the Jupyter file
-    explorer. It may prompt you for an authentication token. If it does,
-    go back to the terminal window that is running the Jupyter notebook server
-    (on Rice/Myth). In the output, you should see some URLs with a portion that
-    looks like "token=...". Copy the token from there and paste it into your
-    browser where requested.
-
+5. From the Jupyter notebook file explorer window that opens, click on the
+pa1.ipynb file to open it. All your implementation will be done directly in the notebook.
 
 # Submitting your Solution
 
