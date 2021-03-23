@@ -17,28 +17,30 @@ expressions.
 
 ## Getting the Assignment
 
-### macOS/Ubuntu for Windows/Linux
+You can get started using the same steps you followed for PA0. To recap,
+you'll want to:
 
-0. Open a terminal (terminal for macOS and Linux, 
-   Ubuntu for Windows for Windows).
+1. Open a terminal (terminal for macOS and Linux, 
+   Ubuntu for Windows for Windows, or SSH into Rice/Myth) the same way you did for PA0. 
 
 1. Clone the git repository for PA1 (this repository) into a folder of your 
    choice by typing this in your terminal:
       
         git clone https://github.com/cs124/pa1-spamlord.git
-   
+
 2. Enter the project root directory and activate your cs124 conda environment by
-   doing: 
+   doing:
    
         cd pa1-spamlord
         conda activate cs124
    
     You should now see `(cs124)` in front of your shell prompt. 
+
    You'll need to do this every time you open a new terminal and re-start your
    notebook server. You should have already created this conda enviornment 
    as part of PA0. If not, and you encounter an error, please go back and 
    follow the instructions there.
-   
+
 3. Start up your jupyter notebook server
 
         jupyter notebook
@@ -149,6 +151,10 @@ to use as an SSH client. Install and run it.
     looks like "token=...". Copy the token from there and paste it into your
     browser where requested.
 
+=======
+5. From the Jupyter notebook file explorer window that opens, click on the
+pa1.ipynb file to open it. All your implementation will be done directly in the notebook.
+>>>>>>> c48f28981fb034c6457b7b7dff367b548e5153fd
 
 # Submitting your Solution
 
