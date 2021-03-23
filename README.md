@@ -1,5 +1,20 @@
 # PA1 - SpamLord
 
+## Recommended before Starting
+
+We recommend checking out the following before getting started on PA1:
+
+* The Week 1 videos and slides on Basic Text Processing, particularly the videos on 
+regular expressions.
+* The Week 1 group work and slides, particularly the part 
+  on regular expressions.
+* Chapter 2 of Jurafsky and Martin (3rd ed.), particularly section 2.1
+and sections 2.4.1, 2.4.2, 2.4.5.
+* The parts of the UNIX for Poets tutorial slides related to regular expressions.
+* PA0 also has some good warm-up exercises on regular
+expressions.
+
+
 ## Getting the Assignment
 
 ### macOS/Ubuntu for Windows/Linux
@@ -7,29 +22,33 @@
 0. Open a terminal (terminal for macOS and Linux, 
    Ubuntu for Windows for Windows).
 
-1. Clone the git repository for PA1 in a location of your choice:
+1. Clone the git repository for PA1 (this repository) into a folder of your 
+   choice by typing this in your terminal:
       
         git clone https://github.com/cs124/pa1-spamlord.git
    
-2. Enter the project root directory and activate your cs124 conda environment 
-   (you should have  already created this as part of pa0. If not, please go 
-   back and follow the instructions there): 
+2. Enter the project root directory and activate your cs124 conda environment by
+   doing: 
    
         cd pa1-spamlord
         conda activate cs124
    
     You should now see `(cs124)` in front of your shell prompt. 
    You'll need to do this every time you open a new terminal and re-start your
-   notebook server.
+   notebook server. You should have already created this conda enviornment 
+   as part of PA0. If not, and you encounter an error, please go back and 
+   follow the instructions there.
+   
 3. Start up your jupyter notebook server
 
         jupyter notebook
 
-10. A window should open automatically in your default browser. If it didn't,
+4. A window should open automatically in your default browser. If it didn't,
     the terminal output should contain a URL you can use to open the
     notebook in a browser of your choice.
-11. From the Jupyter notebook file explorer window that opens, click on the
-pa1.ipynb file to open it.
+   
+5. From the Jupyter notebook file explorer window that opens, click on the
+pa1.ipynb file to open and edit it.
 
 ### Google Colaboratory
 
@@ -37,9 +56,10 @@ pa1.ipynb file to open it.
    If prompted to open a notebook, hit cancel for now. You should double-check 
    that you are logged in to your Stanford Google account. If not, you can 
    switch accounts in the top right.
+   
 2. Now go to File->Open Notebook. Go to the GitHub tab. It will ask you to log 
-   in to your GitHub account. Once you've done that, copy and paste 
-   the URL: 
+   in to your GitHub account (if you don't have one it is easy to make one).
+   Once you've done that, copy and paste the URL: 
    https://github.com/cs124/pa1-spamlord into the search box and hit enter. It should show:
    
             Repository: cs124/pa1-spamlord
