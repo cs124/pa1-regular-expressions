@@ -37,7 +37,7 @@ def get_gold(gold_path: str) -> List[Tuple]:
     """
     gold_results = []
     for line in open(gold_path, 'r'):
-        gold_results.append(tuple(line.strip().split('\t')))
+        gold_results.append(tuple(line.strip().split('|')))
     return gold_results
 
 
@@ -63,6 +63,7 @@ def score(guess_matches: List[Tuple], gold_matches: List[Tuple]) -> None:
         for (fname, _type, value)
         in guess_matches
     ]
+
     gold_matches = [
         (fname, _type, value.lower())
         for (fname, _type, value)

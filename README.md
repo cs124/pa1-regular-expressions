@@ -65,7 +65,7 @@ pa1.ipynb file to open and edit it.
    https://github.com/cs124/pa1-spamlord into the search box and hit enter. It should show:
    
             Repository: cs124/pa1-spamlord
-            Branch:  Master
+            Branch:  Main
 
    Click on pa1.ipynb below to load the notebook.
       
