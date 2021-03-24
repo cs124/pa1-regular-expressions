@@ -17,12 +17,11 @@ def process_dir(directory_path: str, process_file_fn: callable) -> List[Tuple]:
     by the autograder script.
     """
     results = []
-    for fname in os.listdir(directory_path):
+    for filename in os.listdir(directory_path):
         # Skip any files in the directory that start with '.'
-        if fname[0] == '.':
-            continue
-        f_guesses = process_file_fn(fname, directory_path)
-        results.extend(f_guesses)
+        if filename[0] != '.':
+            f_guesses = process_file_fn(filename, directory_path)
+            results.extend(f_guesses)
     return results
 
 
@@ -59,14 +58,14 @@ def score(guess_matches: List[Tuple], gold_matches: List[Tuple]) -> None:
     # Convert the phone numbers/emails (the guesses and the correct/gold)
     # to lowercase
     guess_matches = [
-        (fname, _type, value.lower())
-        for (fname, _type, value)
+        (filename, match_type, match_value.lower())
+        for (filename, match_type, match_value)
         in guess_matches
     ]
 
     gold_matches = [
-        (fname, _type, value.lower())
-        for (fname, _type, value)
+        (filename, match_type, match_value.lower())
+        for (filename, match_type, match_value)
         in gold_matches
     ]
 
