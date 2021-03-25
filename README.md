@@ -21,14 +21,15 @@ You can get started using the same steps you followed for PA0. To recap,
 you'll want to:
 
 1. Open a terminal (terminal for macOS and Linux, 
-   Ubuntu for Windows for Windows, or SSH into Rice/Myth) the same way you did for PA0. 
+   Ubuntu for Windows for Windows, or SSH into Rice/Myth) the same way you did 
+   for PA0. 
 
-1. Clone the git repository for PA1 (this repository) into a folder of your 
+2. Clone the git repository for PA1 (this repository) into a folder of your 
    choice by typing this in your terminal:
       
         git clone https://github.com/cs124/pa1-spamlord.git
 
-2. Enter the project root directory and activate your cs124 conda environment by
+3. Enter the project root directory and activate your cs124 conda environment by
    doing:
    
         cd pa1-spamlord
@@ -41,15 +42,15 @@ you'll want to:
    as part of PA0. If not, and you encounter an error, please go back and 
    follow the instructions there.
 
-3. Start up your jupyter notebook server
+4. Start up your jupyter notebook server
 
         jupyter notebook
 
-4. A window should open automatically in your default browser. If it didn't,
+5. A window should open automatically in your default browser. If it didn't,
     the terminal output should contain a URL you can use to open the
     notebook in a browser of your choice.
    
-5. From the Jupyter notebook file explorer window that opens, click on the
+6. From the Jupyter notebook file explorer window that opens, click on the
 pa1.ipynb file to open and edit it.
 
 ### Google Colaboratory
@@ -62,7 +63,8 @@ pa1.ipynb file to open and edit it.
 2. Now go to File->Open Notebook. Go to the GitHub tab. It will ask you to log 
    in to your GitHub account (if you don't have one it is easy to make one).
    Once you've done that, copy and paste the URL: 
-   https://github.com/cs124/pa1-spamlord into the search box and hit enter. It should show:
+   https://github.com/cs124/pa1-spamlord into the search box and hit enter. It 
+   should show:
    
             Repository: cs124/pa1-spamlord
             Branch:  Main
@@ -139,7 +141,7 @@ to use as an SSH client. Install and run it.
      
     Then, click "Add".
 
-11. Finally, try opening a browser of your choice (i.e. Chrome, Firefox, Safari)
+6. Finally, try opening a browser of your choice (i.e. Chrome, Firefox, Safari)
     and opening the URL:
     
         localhost:[local port number you chose]
@@ -150,11 +152,10 @@ to use as an SSH client. Install and run it.
     (on Rice/Myth). In the output, you should see some URLs with a portion that
     looks like "token=...". Copy the token from there and paste it into your
     browser where requested.
-
-=======
-5. From the Jupyter notebook file explorer window that opens, click on the
-pa1.ipynb file to open it. All your implementation will be done directly in the notebook.
->>>>>>> c48f28981fb034c6457b7b7dff367b548e5153fd
+    
+7. From the Jupyter notebook file explorer window that opens, click on the
+pa1.ipynb file to open it. All your implementation will be done directly in the 
+notebook.
 
 # Submitting your Solution
 
@@ -220,8 +221,9 @@ local machine.
         path something starting with `/mnt/c`, as this is the UNIX path
         that corresponds to your Windows filesystem. This allows you to download
         the zip file to a location where it can be easily accessed directly
-        from windows. For example, if you chose `/mnt/c/Users/[your Windows username]/Desktop`
-        as your destination, the file will be saved to your Windows Desktop folder.
+        from windows. For example, if you chose 
+        `/mnt/c/Users/[your Windows username]/Desktop` as your destination, the 
+        file will be saved to your Windows Desktop folder.
 
    - __[Windows]__ PSCP is another utility that should have been installed
     automatically when you installed PuTTY earlier. Find and run it. In the
