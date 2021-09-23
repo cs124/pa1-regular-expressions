@@ -17,6 +17,8 @@ expressions.
 
 ## Getting the Assignment
 
+### Jupyter Notebook
+
 You can get started using the same steps you followed for PA0. To recap,
 you'll want to:
 
