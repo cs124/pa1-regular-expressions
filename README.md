@@ -1,4 +1,4 @@
-# PA1 - SpamLord
+# PA1 - Regular Expressions (RegExes)
 
 ## Recommended before Starting
 
@@ -6,7 +6,7 @@ We recommend checking out the following before getting started on PA1:
 
 * The Week 1 videos and slides on Basic Text Processing, particularly the videos on 
 regular expressions.
-* The Week 1 group work and slides, particularly the part 
+* The Group Work 1 and slides, particularly the part 
   on regular expressions.
 * Chapter 2 of Jurafsky and Martin (3rd ed.), particularly section 2.1
 and sections 2.4.1, 2.4.2, 2.4.5.
@@ -29,12 +29,12 @@ you'll want to:
 2. Clone the git repository for PA1 (this repository) into a folder of your 
    choice by typing this in your terminal:
       
-        git clone https://github.com/cs124/pa1-spamlord.git
+        git clone https://github.com/cs124/pa1-regexes.git
 
 3. Enter the project root directory and activate your cs124 conda environment by
    doing:
    
-        cd pa1-spamlord
+        cd pa1-regexes
         conda activate cs124
    
     You should now see `(cs124)` in front of your shell prompt. 
@@ -65,10 +65,10 @@ pa1.ipynb file to open and edit it.
 2. Now go to File->Open Notebook. Go to the GitHub tab. It will ask you to log 
    in to your GitHub account (if you don't have one it is easy to make one).
    Once you've done that, copy and paste the URL: 
-   https://github.com/cs124/pa1-spamlord into the search box and hit enter. It 
+   https://github.com/cs124/pa1-regexes into the search box and hit enter. It 
    should show:
    
-            Repository: cs124/pa1-spamlord
+            Repository: cs124/pa1-regexes
             Branch:  master
 
    Click on pa1.ipynb below to load the notebook.
@@ -108,13 +108,13 @@ to use as an SSH client. Install and run it.
 
 2. Clone the git repository for PA1 in a location of your choice:
       
-        git clone https://github.com/cs124/pa1-spamlord.git
+        git clone https://github.com/cs124/pa1-regexes.git
    
 3. Enter the project root directory and activate your cs124 conda environment 
    (you should have already created this as part of pa0. 
    If not, please go back and follow the instructions there): 
    
-        cd pa1-spamlord
+        cd pa1-regexes
         conda activate cs124
 
 4. Start up your jupyter notebook server without a browser.
@@ -166,7 +166,7 @@ notebook.
 1. You can run the cell at the bottom of the Jupyter notebook to zip up your
 solution for you. It should generate a zip file `submission.zip`.
    
-2. Upload the zip file as your solution to the PA1 SpamLord assignment in 
+2. Upload the zip file as your solution to the PA1 RegExes assignment in 
    Gradescope (http://www.gradescope.com).
 
 ## Ubuntu for Windows
@@ -184,7 +184,7 @@ solution for you. It should generate a zip file `submission.zip`.
    
         cp /path/to/submission.zip /mnt/c/Users/[your Windows username]/Desktop
 
-3. Upload the zip file as your solution to the PA1 SpamLord assignment in 
+3. Upload the zip file as your solution to the PA1 RegExes assignment in 
    Gradescope (http://www.gradescope.com).
 
 ## Google Colaboratory
@@ -192,7 +192,7 @@ solution for you. It should generate a zip file `submission.zip`.
 1. Once you've saved all your changes, go to File->Download .ipynb to download
 your notebook file to your local machine.
 2. If your solution required any extra files, make sure they were located in
-pa1-spamlord/deps. Go to the file explorer on the left-hand side and download
+pa1-regexes/deps. Go to the file explorer on the left-hand side and download
 those as well.
 3. Once you have pa1.ipynb and any deps files you need saved locally,
 create a zip file (either from your OS's file explorer or the terminal), making
@@ -201,7 +201,7 @@ sure that it has the following structure:
         deps/
         pa1.ipynb
 
-3. Upload the zip file as your solution to the PA1 SpamLord assignment in 
+3. Upload the zip file as your solution to the PA1 RegExes assignment in 
    Gradescope (http://www.gradescope.com).
 
 ## Rice/Myth
@@ -236,5 +236,5 @@ local machine.
     to download the file from Rice/Myth to your local machine. You should now
    be able to access the file locally at c:\temp\submission.zip
    
-3. Upload the zip file as your solution to the PA1 SpamLord assignment in 
+3. Upload the zip file as your solution to the PA1 RegExes assignment in 
    Gradescope (http://www.gradescope.com).
