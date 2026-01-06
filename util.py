@@ -27,8 +27,7 @@ def process_dir(directory_path: str, process_file_fn: callable) -> List[Tuple]:
 
 def get_gold(gold_path: str) -> List[Tuple]:
     """ Return a list of tuples of the canonical form
-    (filename, type, value) given a path to a tsv file of gold e-mails and
-    phone numbers.
+    (filename, type, value) given a path to a tsv file of gold e-mails.
 
     NOTE: You do not need to and should not modify this function or its
     interface, as any changes made locally to this function will not be used
@@ -47,15 +46,15 @@ def score(guess_matches: List[Tuple], gold_matches: List[Tuple]) -> None:
     true positives, false positives and false negatives (from the set
     intersection and difference).
 
-    NOTE: The scoring is case-insensitive (all of the extracted phone
-    numbers/email addresses are converted to lower case before comparing)
+    NOTE: The scoring is case-insensitive (all of the extracted email
+    addresses are converted to lower case before comparing)
     and removes duplicates.
 
     NOTE: You do not need to and should not modify this function or its
     interface, as any changes made locally to this function will not be used
     by the autograder script.
     """
-    # Convert the phone numbers/emails (the guesses and the correct/gold)
+    # Convert the emails (the guesses and the correct/gold)
     # to lowercase
     guess_matches = [
         (filename, match_type, match_value.lower())
