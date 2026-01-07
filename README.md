@@ -1,11 +1,10 @@
-# PA1 - Regular Expressions
+# PA1 - Regular Expressions and BPE Tokenization
 
 ## Recommended before Starting
 
 We recommend checking out the following before getting started on PA1:
 
-* The Week 1 videos and slides on Basic Text Processing, particularly the videos on 
-regular expressions.
+* The Week 2 videos and slides on Tokenization and Regular Expressions.
 * The Group Work 1 and slides, particularly the part 
   on regular expressions.
 * Chapter 2 of Jurafsky and Martin (3rd ed.), particularly section 2.1
